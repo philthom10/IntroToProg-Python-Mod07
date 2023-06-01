@@ -3,7 +3,7 @@
 
 **Date:** *5.31.2023*
 
-[https://philthom10.github.io/IntroToProg-Python-Mod07/)](https://philthom10.github.io/IntroToProg-Python-Mod07/)
+[https://philthom10.github.io/IntroToProg-Python-Mod07/](https://philthom10.github.io/IntroToProg-Python-Mod07/)
 
 ## 1. Introduction
 
