@@ -3,7 +3,7 @@
 
 **Date:** *5.31.2023*
 
-https://philthom10.github.io/IntroToProg-Python-Mod07/
+[https://philthom10.github.io/IntroToProg-Python-Mod07/)](https://philthom10.github.io/IntroToProg-Python-Mod07/)
 
 ## 1. Introduction
 
@@ -16,9 +16,9 @@ The code for this assignment was written in the PyCharm IDE, with a project stru
 This assignment was different than the previous in that the type of program was up to the student to choose, and there was no starter code or outline. I first started writing a much more complex program that added items as dictionaries, Pickled to binary files, which then would be called by key. After trying to tweak that code for some time, I decided that it had grown to a point that did not focus on the intent of this assignment, which is to demonstrate Pickles and handling exceptions in Python. I then decided to start again with a clearer picture of a simple program that demonstrated the basics of Pickles and exceptions. 
 
 The program has the user create three lists of travel locations as follows:
-	1)	Locations the user has previously traveled to
-	2)	Locations the user has near-term plans to travel to
-	3)	“Bucket-list” travel locations that the user wishes to travel to in their lifetime
+1. Locations the user has previously traveled to
+2. Locations the user has near-term plans to travel to
+3. “Bucket-list” travel locations that the user wishes to travel to in their lifetime
 
 Listing 1, below, shows the framework, pseudo-code that I used to outline my program.
 
@@ -47,14 +47,14 @@ The program starts by importing the pickle and shelve modules that I use later i
 
 The global variables used in the program are then listed. While it is not necessary to declare all variables before using them in a line of code, I find it useful to do so in order to keep it clear which ones exist for reference later. See below (Figure 1) for the import module lines and variables. I ended up using two files with this program—one for the standard dump and load of lists to a binary file, and the other to demonstrate shelving lists.
 
-![Screenshot of code for module import and variable declaration](/Figure%201.png)
+![Screenshot of code for module import and variable declaration](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%201.png)
 ***Figure 1: Module import and variable declaration***
 
 ### 2.2.  Main Body
 
 The main body of the code is shown below (Figure 2). The first While loop collects the user inputs to generate the three lists. It uses a simple method of user typing “exit” in order to break the loop. This is an area of program that I would make cleaner and more sophisticated with more time to work on it, but I chose to keep it simple in order to focus my time on the pickling and exception handling.
 
-![Screenshot of main body of code](/images/Figure%202.png)
+![Screenshot of main body of code](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%202.png)
 
 ***Figure 2: Main body of code***
 
@@ -66,7 +66,7 @@ The details of the functions important to the use of the pickle function are hig
 
 The processor class for this program has four functions, shown collapsed, below (Figure 3). These are the functions where the important pickle method steps take place, so I will detail them further.
 
-![Screenshot of code, functions within Processor class](/images/Figure%203.png)
+![Screenshot of code, functions within Processor class](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%203.png)
 
 ***Figure 3: Functions within Processor class***
 
@@ -78,7 +78,7 @@ The function receives the file name to be written to as a parameter, as well as 
 
 Because this is a simple program to demonstrate pickling and error handling, each time it is run by a user, the file will be overwritten with new data. This is as-designed, so that it is not confusing to the user to have existing data strings already in the file. A more advanced and useful program would allow the user to load existing strings and add to them.
 
-![Screenshot of code, dump data function](/images/Figure%204.png)
+![Screenshot of code, dump data function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%204.png)
 
 ***Figure 4: Code for dump_data_to_file() function***
 
@@ -88,7 +88,7 @@ The pickle.dump() function is what stores the lists in the binary file. It only 
 
 The next step of the program is to load the lists that were just stored by the user from the binary file. This is accomplished using the load_data_from_file() Function, with the code shown below (Figure 5).
 
-![Screenshot of code for load data from file function](/images/Figure%205.png)
+![Screenshot of code for load data from file function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%205.png)
 
 ***Figure 5: Code for load_data_from_file() function***
 
@@ -102,7 +102,7 @@ The other two functions within this program’s Processor class are the two for 
 
 First, I used the shelf_data_file() function as shown below (Figure 6).
 
-![Screenshot of code for shelf data file function](/images/Figure%206.png)
+![Screenshot of code for shelf data file function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure%206.png)
 
 ***Figure 6: Code for shelf_data_file() function***
 
@@ -112,7 +112,7 @@ This function receives the other file name “TravelListShelf.dat” as an argum
 
 Finally, the shelf_data_file() function is used to retrieve the lists from the binary file.  See below (Figure 7) for the code of this function. The file name and the key selected by the user are passed as parameters into this function, then if / elif statements are used to compare the user-selected key with the keys in shelf of the pickled lists. The matching list is then returned and displayed to the user.  I did not specify an access mode argument in the shelve.open() function, as the default c mode to read or write, as described in table 7.5 of **(DAWSON, 203)** was sufficient for the needs of my program.
 
-![Screenshot of code for return_selected_shelf() function](/images/Figure7.png)
+![Screenshot of code for return_selected_shelf() function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure7.png)
 
 ***Figure 7: Code for return_selected_shelf() function***
 
@@ -128,13 +128,13 @@ The IO class of this program contains ten total custom function, as shown with d
 
 The purpose of the  input_location() function is to take the selection of the list that the user wishes to update, passed as a parameter, and prompt for / capture continues input of vacation locations until the user types “done” to stop the entry. The function then returns a list created from the user input for that specific vacation category. The code for this function is show below (Figure 9).
 
-![Screenshot of code input_location() function](/images/Figure9.png)
+![Screenshot of code input_location() function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure9.png)
 
 ***Figure 9: input_location() function code***
 
 I used this function as a chance to demonstrate exception handling by raising a custom exception if the user inputs a numeric value. I defined the custom exception NumericLocationException at the beginning of my program, see below (Figure 10). Typically these custom exceptions would be in a separate file, but for the purposes of this assignment, I included them in the Assignment07.py file.
 
-![Screenshot of code custom NumericLocationException class](/images/Figure10.png)
+![Screenshot of code custom NumericLocationException class](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure10.png)
 
 ***Figure 10: Custom NumericLocationException class***
 
@@ -144,13 +144,13 @@ The exception is handled using the try statement with the except clause **(DAWSO
 
 The second function with exception handling is the input_shelf_key() function. This function prompts the user to input a key word that is used to retrieve a pickled list, as detailed in section 2.3.2 of this paper. The code for this function is shown below (Figure 11).
 
-![Screenshot of code input_shelf_key() function](/images/Figure11.png)
+![Screenshot of code input_shelf_key() function](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure11.png)
 
 ***Figure 11: input_shelf_key() function code***
 
 While the exception handling detailed in the previous section for input_location() was a good demonstration, the exception handling in this input_shelf_key() provides a practical use. It is important for the user to input the key exactly as desired, else it will not match the key of the shelf. I used another custom exception class InvalidChoiceException for this. See below (Figure 12).
 
-![Screenshot of code Custom InvalidChoiceException class](/images/Figure12.png)
+![Screenshot of code Custom InvalidChoiceException class](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure12.png)
 
 ***Figure 12: Custom InvalidChoiceException class***
 
@@ -159,18 +159,18 @@ Comparison operators are used in the try block to compare the user input against
 ## 3. Running the Program ##
 The program eventually ran successfully both in PyCharm (Figure 13) as well as the Windows command window (Figure 14).  The display of instructions and descriptions back to the user is not perfect, and with more time I would improve the overall look and feel of the program. However, it sufficiently shows pickling and exception handling.
 
-![Screenshot of program running in PyCharm](/images/Figure13.png)
+![Screenshot of program running in PyCharm](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure13.png)
 
 ***Figure 13: Running Program in PyCharm***
 
 
-![Screenshot of program running in Windows command window](/images/Figure14.png)
+![Screenshot of program running in Windows command window](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure14.png)
 
 ***Figure 14: Running Program in Windows command window***
 
 I verified that the data was saved in the .dat files for both methods, in the correct relative directory. See below (Figure 15) for an image of the TravelList.dat file open in Notepad.
 
-![Screenshot of .dat files created in folder and opened](/images/Figure15.png)
+![Screenshot of .dat files created in folder and opened](https://philthom10.github.io/IntroToProg-Python-Mod07/Figure15.png)
 
 ***Figure 15: .dat files created in folder and opened***
 
