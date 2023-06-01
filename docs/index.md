@@ -47,7 +47,7 @@ The program starts by importing the pickle and shelve modules that I use later i
 
 The global variables used in the program are then listed. While it is not necessary to declare all variables before using them in a line of code, I find it useful to do so in order to keep it clear which ones exist for reference later. See below (Figure 1) for the import module lines and variables. I ended up using two files with this program—one for the standard dump and load of lists to a binary file, and the other to demonstrate shelving lists.
 
-![Screenshot of code for module import and variable declaration](../blob/main/docs/images/Figure%201.png)
+![Screenshot of code for module import and variable declaration](/images/Figure%201.png)
 ***Figure 1: Module import and variable declaration***
 
 ### 2.2.  Main Body
